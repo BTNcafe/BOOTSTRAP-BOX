@@ -1,2 +1,3 @@
-BOOTSTRAP-BOX
+BOOTSTRAP BOX
 =============
+UPPERCASE + Bootstrap
