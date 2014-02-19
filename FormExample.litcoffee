@@ -15,14 +15,17 @@
 
 폼을 미리 만든다.
 
-                    form = B.FORM
+                    textGroup = B.FORMGROUP
                         children: [
                             B.LABEL
-아직 for 설정은 적용되지 않는다.
-
-                                for: 'name'
+                                f: 'name'
                                 children: ['Text']
-                            B.FORMCONTROL_INPUT(name : 'name')
+                            B.FORMCONTROL_INPUT name : 'name'
+                        ]
+
+                    form = B.FORM
+                        children: [
+                            textGroup
                         ]
 
                     BODY.append B.APPLY
