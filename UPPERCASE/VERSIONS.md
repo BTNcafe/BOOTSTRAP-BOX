@@ -1,5 +1,6 @@
 1.2.8 (working)
 - BROWSER_CONFIG에서 function을 제대로 passing하도록 개선
+- 기본 스타일시트 개선
 
 1.2.7 (2014. 2. 18)
 - MODEL에 onRemove 추가
