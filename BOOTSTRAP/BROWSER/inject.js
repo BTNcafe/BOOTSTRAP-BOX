@@ -6,6 +6,7 @@ BOOTSTRAP.inject = METHOD({
 		//REQUIRED: params.params
 		//OPTIONAL: params.params.c
 		//OPTIONAL: params.params.data
+		//OPTIONAL: params.params.aria
 
 		var
 		// inner
@@ -18,7 +19,10 @@ BOOTSTRAP.inject = METHOD({
 		c = params2 === undefined ? undefined : params2.c,
 
 		// data
-		data = params2 === undefined ? undefined : params2.data;
+		data = params2 === undefined ? undefined : params2.data,
+
+		// aria
+		aria = params2 === undefined ? undefined : params2.aria;
 
 		if (c !== undefined) {
 			inner.setAttr({
@@ -36,5 +40,13 @@ BOOTSTRAP.inject = METHOD({
 			});
 		}
 
+		if (aria !== undefined) {
+			EACH(aria, function(value, name) {
+				inner.setAttr({
+					name : 'aria-' + name,
+					value : value
+				});
+			});
+		}
 	}
 });
