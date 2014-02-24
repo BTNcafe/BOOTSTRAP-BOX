@@ -11,9 +11,6 @@ BOOTSTRAP.APPLY = CLASS({
 		linkEl.setAttribute('href', '/BOOTSTRAP/R/bootstrap.css');
 
 		document.getElementsByTagName('head')[0].appendChild(linkEl);
-
-		// is loaded theme
-		//cls.isLoadedTheme
 	},
 
 	preset : function() {'use strict';

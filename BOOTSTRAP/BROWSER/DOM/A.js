@@ -14,6 +14,7 @@ BOOTSTRAP.A = CLASS({
 
 		BOOTSTRAP.inject({
 			inner : inner,
+			self : self,
 			params : params
 		});
 

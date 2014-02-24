@@ -18,6 +18,12 @@ BOOTSTRAP.LABEL = CLASS({
 		// f
 		f = params.f;
 
+		BOOTSTRAP.inject({
+			inner : inner,
+			self : self,
+			params : params
+		});
+
 		inner.setAttr({
 			name : 'for',
 			value : f
