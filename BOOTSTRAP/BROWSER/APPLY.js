@@ -11,14 +11,6 @@ BOOTSTRAP.APPLY = CLASS({
 		linkEl.setAttribute('href', '/BOOTSTRAP/R/bootstrap.css');
 
 		document.getElementsByTagName('head')[0].appendChild(linkEl);
-		
-		linkEl = document.createElement('link');
-
-		linkEl.setAttribute('rel', 'stylesheet');
-		linkEl.setAttribute('type', 'text/css');
-		linkEl.setAttribute('href', '/BOOTSTRAP/R/bootstrap-datetimepicker.min.css');
-
-		document.getElementsByTagName('head')[0].appendChild(linkEl);
 	},
 
 	preset : function() {'use strict';
