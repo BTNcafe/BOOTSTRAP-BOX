@@ -1,5 +1,5 @@
 /*
- * UPPERCASE Packer.
+ * UPPERCASE.IO Packer.
  */
 global.PACKER = function() {'use strict';
 
@@ -153,6 +153,11 @@ global.PACKER = function() {'use strict';
 
 			// add to browser script.
 			browserScript += content + '\n';
+
+		} else if (extname === '.__UPPERCASE_IO_COMPILED') {
+
+			// add to browser script.
+			browserScript += content + '\n';
 		}
 	},
 
@@ -165,12 +170,20 @@ global.PACKER = function() {'use strict';
 		absolutePath = rootPath + '/' + relativePath,
 
 		// extname
-		extname = path.extname(relativePath);
+		extname = path.extname(relativePath),
+
+		// content
+		content = fs.readFileSync(absolutePath);
 
 		if (extname === '.js') {
 
 			// add to secured browser script.
-			securedBrowserScript += fs.readFileSync(absolutePath) + '\n';
+			securedBrowserScript += content + '\n';
+
+		} else if (extname === '.__UPPERCASE_IO_COMPILED') {
+
+			// add to secured browser script.
+			securedBrowserScript += content + '\n';
 		}
 	},
 
@@ -189,6 +202,11 @@ global.PACKER = function() {'use strict';
 		content = fs.readFileSync(absolutePath);
 
 		if (extname === '.js') {
+
+			// add to common script.
+			commonScript += content + '\n';
+
+		} else if (extname === '.__UPPERCASE_IO_COMPILED') {
 
 			// add to common script.
 			commonScript += content + '\n';
@@ -213,6 +231,11 @@ global.PACKER = function() {'use strict';
 
 			// add to server script.
 			serverScript += content + '\n';
+
+		} else if (extname === '.__UPPERCASE_IO_COMPILED') {
+
+			// add to server script.
+			serverScript += content + '\n';
 		}
 	},
 
@@ -221,7 +244,7 @@ global.PACKER = function() {'use strict';
 
 		var
 		// uglify-js
-		uglifyJS = require(rootPath + '/UPPERCASE/SERVER/node_modules/uglify-js');
+		uglifyJS = require(rootPath + '/UPPERCASE.IO/SERVER/node_modules/uglify-js');
 
 		// minify browser script.
 		browserScript = uglifyJS.minify(browserScript, {

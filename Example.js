@@ -4,7 +4,7 @@ BOOT({
 	CONFIG : {
 		isDevMode : true
 	},
-	SERVER_CONFIG : {
+	NODE_CONFIG : {
 		isNotUsingDB : true
 	},
 	BROWSER_CONFIG : {
@@ -35,15 +35,15 @@ BOOT({
 						close;
 
 						body = B.APPLY({
-							children : [B.DIV({
+							c : [B.DIV({
 								cls : 'navbar navbar-inverse navbar-fixed-top',
-								children : [B.DIV({
+								c : [B.DIV({
 									cls : 'container',
-									children : [B.DIV({
+									c : [B.DIV({
 										cls : 'navbar-header',
-										children : [B.A({
+										c : [B.A({
 											cls : 'navbar-toggle',
-											children : [B.SPAN({
+											c : [B.SPAN({
 												cls : 'sr-only',
 												childsren : ['Toggle navigation']
 											}), B.SPAN({
@@ -55,61 +55,61 @@ BOOT({
 											})]
 										}), B.A({
 											cls : 'navbar-brand',
-											children : ['BOOTSTRAP BOX Example']
+											c : ['BOOTSTRAP BOX Example']
 										})]
 									}), B.DIV({
 										cls : 'navbar-collapse collapse',
-										children : [B.UL({
+										c : [B.UL({
 											cls : 'nav navbar-nav',
-											children : [B.LI({
+											c : [B.LI({
 												cls : 'active',
-												children : [B.A({
-													children : ['Home']
+												c : [B.A({
+													c : ['Home']
 												})]
 											}), B.LI({
-												children : [B.A({
-													children : ['About']
+												c : [B.A({
+													c : ['About']
 												})]
 											}), B.LI({
-												children : [B.A({
-													children : ['Contact']
+												c : [B.A({
+													c : ['Contact']
 												})]
 											}), B.LI({
 												cls : 'dropdown',
-												children : [ dropdownToggle = B.A({
+												c : [ dropdownToggle = B.A({
 													cls : 'dropdown-toggle',
 													data : {
 														toggle : 'dropdown'
 													},
-													children : ['Dropdown ', B.SPAN({
+													c : ['Dropdown ', B.SPAN({
 														cls : 'caret'
 													})]
 												}), B.UL({
 													cls : 'dropdown-menu',
-													children : [B.LI({
-														children : [B.A({
-															children : ['Action']
+													c : [B.LI({
+														c : [B.A({
+															c : ['Action']
 														})]
 													}), B.LI({
-														children : [B.A({
-															children : ['Another action']
+														c : [B.A({
+															c : ['Another action']
 														})]
 													}), B.LI({
-														children : [B.A({
-															children : ['Something else here']
+														c : [B.A({
+															c : ['Something else here']
 														})]
 													}), B.LI({
 														cls : 'divider'
 													}), B.LI({
 														cls : 'dropdown-header',
-														children : ['Nav header']
+														c : ['Nav header']
 													}), B.LI({
-														children : [B.A({
-															children : ['Separated link']
+														c : [B.A({
+															c : ['Separated link']
 														})]
 													}), B.LI({
-														children : [B.A({
-															children : ['One more separated link']
+														c : [B.A({
+															c : ['One more separated link']
 														})]
 													})]
 												})]
@@ -123,16 +123,16 @@ BOOT({
 									paddingTop : 70,
 									paddingBottom : 30
 								},
-								children : [B.DIV({
+								c : [B.DIV({
 									cls : 'jumbotron',
-									children : [B.H1({
-										children : ['Hello, world!']
+									c : [B.H1({
+										c : ['Hello, world!']
 									}), B.P({
-										children : ['This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.']
+										c : ['This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.']
 									}), B.P({
-										children : [B.A({
+										c : [B.A({
 											cls : 'btn btn-primary btn-lg',
-											children : ['Learn more »']
+											c : ['Learn more »']
 										})]
 									})]
 								}),
@@ -140,419 +140,419 @@ BOOT({
 								// buttons
 								B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Buttons']
+									c : [B.H1({
+										c : ['Buttons']
 									})]
 								}), B.P({
-									children : [B.A({
+									c : [B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-default',
-										children : ['Default']
+										c : ['Default']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-primary',
-										children : ['Primary']
+										c : ['Primary']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-success',
-										children : ['Success']
+										c : ['Success']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-info',
-										children : ['Info']
+										c : ['Info']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-warning',
-										children : ['Warning']
+										c : ['Warning']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-danger',
-										children : ['Danger']
+										c : ['Danger']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-lg btn-link',
-										children : ['Link']
+										c : ['Link']
 									})]
 								}), B.P({
-									children : [B.A({
+									c : [B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-default',
-										children : ['Default']
+										c : ['Default']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-primary',
-										children : ['Primary']
+										c : ['Primary']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-success',
-										children : ['Success']
+										c : ['Success']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-info',
-										children : ['Info']
+										c : ['Info']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-warning',
-										children : ['Warning']
+										c : ['Warning']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-danger',
-										children : ['Danger']
+										c : ['Danger']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-link',
-										children : ['Link']
+										c : ['Link']
 									})]
 								}), B.P({
-									children : [B.A({
+									c : [B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-default',
-										children : ['Default']
+										c : ['Default']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-primary',
-										children : ['Primary']
+										c : ['Primary']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-success',
-										children : ['Success']
+										c : ['Success']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-info',
-										children : ['Info']
+										c : ['Info']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-warning',
-										children : ['Warning']
+										c : ['Warning']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-danger',
-										children : ['Danger']
+										c : ['Danger']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-sm btn-link',
-										children : ['Link']
+										c : ['Link']
 									})]
 								}), B.P({
-									children : [B.A({
+									c : [B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-default',
-										children : ['Default']
+										c : ['Default']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-primary',
-										children : ['Primary']
+										c : ['Primary']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-success',
-										children : ['Success']
+										c : ['Success']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-info',
-										children : ['Info']
+										c : ['Info']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-warning',
-										children : ['Warning']
+										c : ['Warning']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn btn-xs btn-danger',
-										children : ['Danger']
+										c : ['Danger']
 									}), B.A({
 										style : {
 											marginLeft : 5
 										},
 										cls : 'btn-xs btn-link',
-										children : ['Link']
+										c : ['Link']
 									})]
 								}),
 
 								// thumbnails
 								B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Thumbnails']
+									c : [B.H1({
+										c : ['Thumbnails']
 									})]
 								}), B.IMG({
 									cls : 'img-thumbnail',
-									src : UPPERCASE.R('logo.png')
+									src : UPPERCASE.IO.R('logo.png')
 								}),
 
 								// alerts
 								B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Alerts']
+									c : [B.H1({
+										c : ['Alerts']
 									})]
 								}), B.DIV({
 									cls : 'alert alert-success',
-									children : ['Well done! You successfully read this important alert message.']
+									c : ['Well done! You successfully read this important alert message.']
 								}), B.DIV({
 									cls : 'alert alert-info',
-									children : ['Heads up! This alert needs your attention, but it\'s not super important.']
+									c : ['Heads up! This alert needs your attention, but it\'s not super important.']
 								}), B.DIV({
 									cls : 'alert alert-warning',
-									children : ['Warning! Best check yo self, you\'re not looking too good.']
+									c : ['Warning! Best check yo self, you\'re not looking too good.']
 								}), B.DIV({
 									cls : 'alert alert-danger',
-									children : ['Oh snap! Change a few things up and try submitting again.']
+									c : ['Oh snap! Change a few things up and try submitting again.']
 								}),
 
 								// progree bars
 								B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Progress bars']
+									c : [B.H1({
+										c : ['Progress bars']
 									})]
 								}), B.DIV({
 									cls : 'progress',
-									children : [B.DIV({
+									c : [B.DIV({
 										cls : 'progress-bar',
 										aria : {
 											valuenow : 60,
 											valuemin : 0,
 											valuemax : 100
 										},
-										children : [B.SPAN({
+										c : [B.SPAN({
 											cls : 'sr-only',
-											children : ['60% Complete']
+											c : ['60% Complete']
 										})]
 									})]
 								}), B.DIV({
 									cls : 'page-header',
-									children : [H1({
-										children : ['List groups']
+									c : [H1({
+										c : ['List groups']
 									})]
 								}), B.DIV({
 									cls : 'row',
-									children : [B.DIV({
+									c : [B.DIV({
 										cls : 'col-sm-4',
-										children : [B.UL({
+										c : [B.UL({
 											cls : 'list-group',
-											children : [B.LI({
+											c : [B.LI({
 												cls : 'list-group-item',
-												children : ['Cras justo odio']
+												c : ['Cras justo odio']
 											}), B.LI({
 												cls : 'list-group-item',
-												children : ['Dapibus ac facilisis in']
+												c : ['Dapibus ac facilisis in']
 											}), B.LI({
 												cls : 'list-group-item',
-												children : ['Morbi leo risus']
+												c : ['Morbi leo risus']
 											}), B.LI({
 												cls : 'list-group-item',
-												children : ['Porta ac consectetur ac']
+												c : ['Porta ac consectetur ac']
 											}), B.LI({
 												cls : 'list-group-item',
-												children : ['Vestibulum at eros']
+												c : ['Vestibulum at eros']
 											})]
 										})]
 									}), B.DIV({
 										cls : 'col-sm-4',
-										children : [B.DIV({
+										c : [B.DIV({
 											cls : 'list-group',
-											children : [B.A({
+											c : [B.A({
 												cls : 'list-group-item active',
-												children : ['Cras justo odio']
+												c : ['Cras justo odio']
 											}), B.A({
 												cls : 'list-group-item',
-												children : ['Dapibus ac facilisis in']
+												c : ['Dapibus ac facilisis in']
 											}), B.A({
 												cls : 'list-group-item',
-												children : ['Morbi leo risus']
+												c : ['Morbi leo risus']
 											}), B.A({
 												cls : 'list-group-item',
-												children : ['Porta ac consectetur ac']
+												c : ['Porta ac consectetur ac']
 											}), B.A({
 												cls : 'list-group-item',
-												children : ['Vestibulum at eros']
+												c : ['Vestibulum at eros']
 											})]
 										})]
 									}), B.DIV({
 										cls : 'col-sm-4',
-										children : [B.DIV({
+										c : [B.DIV({
 											cls : 'list-group',
-											children : [B.A({
+											c : [B.A({
 												cls : 'list-group-item active',
-												children : [B.H4({
+												c : [B.H4({
 													cls : 'list-group-item-heading',
-													children : ['List group item heading']
+													c : ['List group item heading']
 												}), B.P({
 													cls : 'list-group-item-text',
-													children : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
+													c : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
 												})]
 											}), B.A({
 												cls : 'list-group-item',
-												children : [B.H4({
+												c : [B.H4({
 													cls : 'list-group-item-heading',
-													children : ['List group item heading']
+													c : ['List group item heading']
 												}), B.P({
 													cls : 'list-group-item-text',
-													children : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
+													c : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
 												})]
 											}), B.A({
 												cls : 'list-group-item',
-												children : [B.H4({
+												c : [B.H4({
 													cls : 'list-group-item-heading',
-													children : ['List group item heading']
+													c : ['List group item heading']
 												}), B.P({
 													cls : 'list-group-item-text',
-													children : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
+													c : ['Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.']
 												})]
 											})]
 										})]
 									})]
 								}), B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Panels']
+									c : [B.H1({
+										c : ['Panels']
 									})]
 								}), B.DIV({
 									cls : 'row',
-									children : [B.DIV({
+									c : [B.DIV({
 										cls : 'col-sm-4',
-										children : [B.DIV({
+										c : [B.DIV({
 											cls : 'panel panel-default',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										}), B.DIV({
 											cls : 'panel panel-primary',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										})]
 									}), B.DIV({
 										cls : 'col-sm-4',
-										children : [B.DIV({
+										c : [B.DIV({
 											cls : 'panel panel-success',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										}), B.DIV({
 											cls : 'panel panel-info',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										})]
 									}), B.DIV({
 										cls : 'col-sm-4',
-										children : [B.DIV({
+										c : [B.DIV({
 											cls : 'panel panel-warning',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										}), B.DIV({
 											cls : 'panel panel-danger',
-											children : [B.DIV({
+											c : [B.DIV({
 												cls : 'panel-heading',
-												children : [B.H3({
+												c : [B.H3({
 													cls : 'panel-title',
-													children : ['Panel title']
+													c : ['Panel title']
 												})]
 											}), B.DIV({
 												cls : 'panel-body',
-												children : ['Panel content']
+												c : ['Panel content']
 											})]
 										})]
 									})]
 								}), B.DIV({
 									cls : 'page-header',
-									children : [B.H1({
-										children : ['Wells']
+									c : [B.H1({
+										c : ['Wells']
 									})]
 								}), B.DIV({
 									cls : 'well',
-									children : [P({
-										children : ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.']
+									c : [P({
+										c : ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.']
 									})]
 								})]
 							})]
