@@ -4,7 +4,7 @@ BOOTSTRAP.H3 = CLASS({
 		return H3;
 	},
 
-	init : function(cls, inner, self, params) {'use strict';
+	init : function(inner, self, params) {'use strict';
 		BOOTSTRAP.inject({
 			inner : inner,
 			self : self,
